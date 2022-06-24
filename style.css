@@ -1,5 +1,89 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
 
+*,
+*::after
+*::before {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+/* font-smoothing */
+-webkit-font-smoothing: antialiased;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+-moz-osx-font-smoothing: grayscale;
 }
 
+body {
+display: flex;
+flex-direction: column;
+background-color: rgb(239, 239, 239);
+font-family: 'Titillium Web', sans-serif;
+font-size: 1em;
+}
+
+/* contains navbar container */
+.navbar {
+background-color: rgb(11, 11, 11);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+max-width: 100%;
+box-shadow: 1px 1px 10px black;
+}
+
+/* contains navbar content */
+.navbar--container {
+display: flex;
+align-items: center;
+margin: 0 auto;
+justify-content: space-between;
+}
+
+/* navbar logo */
+.navbar img {
+min-width: 7em;
+margin-left: 1.5em;
+margin-right: auto;
+}
+
+/* contains navbar links and button */
+.navbar ul {
+display: flex;
+align-items: center;
+list-style: none;
+}
+
+ul li a:nth-child(2) {
+color: aqua;
+margin: 0 auto;
+}
+
+ul a {
+text-decoration: none;
+color: whitesmoke;
+margin-left: 1.8em;
+}
+
+ul a:hover {
+color: rgb(206, 206, 206);
+}
+
+
+.join-now-button {
+margin-left: 2em;
+margin-right: 1.5em;
+background-color: rgb(238, 4, 4);
+color: rgb(255, 255, 255);
+padding: 0.5em 1.5em;
+border: 1px solid gray;
+border-radius: 1em;
+font-size: 1em;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.join-now-button:hover {
+background-color: rgb(191, 1, 1);
+cursor: pointer;
+}
 
