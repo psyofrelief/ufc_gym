@@ -11,7 +11,7 @@ text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 -moz-osx-font-smoothing: grayscale;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, p {
 margin: 0;
 padding: 0;
 }
@@ -27,8 +27,8 @@ font-size: 1em;
 
 main {
 display: grid;
-grid-template-areas: "info . offer";
-max-height: 80vh;
+grid: 
+'info events';
 }
 
 
@@ -79,7 +79,6 @@ margin-left: 1.8em;
 ul a:hover {
 color: rgb(206, 206, 206);
 }
-
 
 .join-now-button {
 margin-left: 2em;
@@ -177,12 +176,11 @@ user-select: none;
 
 /* contains info containers */
 .info--container {
-margin: 0 auto;
-padding: 2em 4em;
+margin-left: auto;
+padding: 2em;
 min-height: 80vh;
 display: flex;
 flex-direction: column;
-
 }
 
 /* contains info */
@@ -191,9 +189,32 @@ border: 1px solid lightgray;
 background-color: white;
 display: flex;
 flex-direction: column-reverse;
-padding: 0.6em 2em;
+padding: 0.8em 2em;
 box-shadow: 1px 1px 0.8em rgba(107, 106, 106, 0.298);
 margin-bottom: 1em;
+}
+
+/* contains heading and icon */
+.headericon {
+display: flex;
+align-items: center;
+margin-bottom: 0.7em;
+}
+
+/* icons in info boxes */
+.info--container img {
+max-width: 1.7em;
+margin-left: auto;
+padding: 0.2em;
+max-block-size: 2em;
+min-width: 1.1em;
+}
+
+/* contains heading and icon for hours */
+.headericon.hours {
+display: flex;
+align-items: center;
+margin-bottom: 0.4em;
 }
 
 /* contains text for gym hours */
@@ -207,38 +228,31 @@ flex-direction: column;
 display: flex;
 }
 
-/* icons in info boxes */
-.info--container img {
-max-width: 1.7em;
-margin-left: auto;
-padding: 0.2em;
-max-block-size: 2em;
-min-width: 1.1em;
-}
-
+/* days in hours container */
 .info--container span {
 margin-right: auto;
 }
 
-.headericon.hours {
-display: flex;
-align-items: center;
-margin-bottom: 0.4em;
-}
-.headericon {
-display: flex;
-align-items: center;
+/* contains heading and icon for timetable */
+.info.timetable .headericon {
+margin: 0;
 }
 
 
 
+/* IMAGES
+================================================= */
+
+/* contains offer and events */
 .images--container {
-padding: 2em 1em;
+padding: 2em;
 min-height: 80vh;
 display: flex;
 flex-direction: column;
+margin-right: auto;
 }
 
+/* contains offer details */
 .offer--container {
 background-image: url(images/ufcgym-offer-1.png);
 background-size: cover;
@@ -249,8 +263,6 @@ align-items: center;
 padding: 2em 8em;
 flex-basis: 30%;
 box-shadow: 1px 1px 0.7em black;
-justify-content: center;
-margin-bottom: 1em;
 }
 
 /* contains offer text */
@@ -263,6 +275,7 @@ text-shadow: 3px 3px 0.4em black;
 min-width: 100%;
 }
 
+/* get offer button */
 .offer--container button {
 margin-top: 2em;
 padding: 0.6em 1.4em;
@@ -274,30 +287,37 @@ border-radius: 0.5em;
 text-shadow: 2px 1px 0.5em black;
 }
 
+/* contains event details */
 .events--container {
 box-shadow: 1px 1px 0.9em darkgray;
 padding: 1em;
+border: 1px solid red;
 }
 
+/* events heading */
 .events--container h3 {
 color: rgb(217, 0, 0);
 font-size: 2em;
 margin-bottom: 0.3em;
 }
 
+/* contains image and event text */
 .events-img-txt {
 display: flex;
 }
 
+/* events text */
 .events--container p {
 margin-right: auto;
 font-size: 1.2em;
 }
 
+/* events image */
 .events--container img {
 margin-right: 1.8em;
 }
 
+/* NO EVENTS text */
 .events--container span {
 text-transform: uppercase;
 text-decoration: underline solid red 2px;
@@ -305,4 +325,49 @@ margin-left: auto;
 color: rgb(97, 97, 97);
 }
 
+
+
+/* FOOTER
+================================================= */
+
+.footer {
+display: grid;
+grid: 'slogan'
+      'footer';
+background-color: black;
+min-width: 45em;
+}
+
+.footer--container {
+display: flex;
+color: whitesmoke;
+}
+
+
+
+.slogan {
+outline: 1px solid red;
+display: flex;
+background-color: rgb(234, 0, 0);
+min-width: 100%;
+}
+
+.slogan p {
+margin: 0.8em auto;
+font-size: 2em;
+color: white;
+text-shadow: 1px 1px 0.5em rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.footer a {
+text-decoration: none;
+color: whitesmoke;
+}
+
+.footer img {
+max-width: 6em;
+}
 
