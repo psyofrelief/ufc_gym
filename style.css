@@ -29,7 +29,6 @@ main {
 display: grid;
 grid: 
 'info events';
-max-height: 45.2em;
 }
 
 
@@ -108,8 +107,8 @@ cursor: pointer;
 .header {
 background-image: url(images/ufc-bg-image.png);
 background-repeat: no-repeat;
-background-size: 100vw 100vh;
-background-position: 0;
+background-size: cover;
+background-position: center;
 background-attachment: fixed;
 margin-top: 4.15em;
 padding: 11em 5em;
@@ -247,7 +246,6 @@ margin: 0;
 /* contains offer and events */
 .images--container {
 padding: 2em;
-min-height: 80vh;
 display: flex;
 flex-direction: column;
 margin-right: auto;
@@ -261,18 +259,17 @@ background-repeat: no-repeat;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 2em 8em;
-flex-basis: 30%;
-box-shadow: 1px 1px 0.7em black;
+padding: 2em 7em;
+box-shadow: 1px 1px 0.7em rgba(0, 0, 0, 0.7);
 }
 
 /* contains offer text */
 .offer--text {
 text-align: center;
 color: whitesmoke;
-font-size: 1.8em;
+font-size: 1.4em;
 line-height: 2em;
-text-shadow: 3px 3px 0.4em black;
+text-shadow: 1px 1px 0.4em black;
 min-width: 100%;
 }
 
@@ -283,15 +280,21 @@ padding: 0.6em 1.4em;
 font-size: 1em;
 background-color: red;
 color: white;
-border: 1px solid darkgrey;
+border: 1px solid black;
 border-radius: 0.5em;
 text-shadow: 2px 1px 0.5em black;
 }
 
+.offer--container button:hover {
+cursor: pointer;
+background-color: rgb(191, 1, 1);
+}
+
 /* contains event details */
 .events--container {
-box-shadow: 1px 1px 1.7em rgba(0, 0, 0, 0.7);
+box-shadow: 1px 1px 1.7em rgba(0, 0, 0, 0.3);
 padding: 1em;
+margin-top: 1em
 }
 
 /* events heading */
@@ -370,13 +373,6 @@ align-items: center;
 justify-content: center;
 }
 
-.footer--info {
-
-}
-
-.footer--locations {
-
-}
 
 h4 {
 font-size: 1.1em;
@@ -394,3 +390,13 @@ max-width: 10em;
 margin-bottom: 2em;
 }
 
+
+
+/* MEDIA QUERIES
+================================================= */
+
+@media screen and (max-width: 730px) {
+    main {
+    display: block;
+    }
+}
