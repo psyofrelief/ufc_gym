@@ -198,14 +198,14 @@ margin-bottom: 1em;
 .headericon {
 display: flex;
 align-items: center;
-margin-bottom: 0.7em;
+margin-bottom: 1em;
 }
 
 /* icons in info boxes */
 .info--container img {
 max-width: 1.7em;
 margin-left: auto;
-padding: 0.2em;
+padding: 0.6em;
 max-block-size: 2em;
 min-width: 1.1em;
 }
@@ -214,7 +214,7 @@ min-width: 1.1em;
 .headericon.hours {
 display: flex;
 align-items: center;
-margin-bottom: 0.4em;
+margin-bottom: 1em;
 }
 
 /* contains text for gym hours */
@@ -232,6 +232,12 @@ display: flex;
 .info--container span {
 margin-right: auto;
 }
+
+/* header in info */
+.info--container h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    }
 
 /* contains heading and icon for timetable */
 .info.timetable .headericon {
@@ -293,7 +299,7 @@ background-color: rgb(191, 1, 1);
 /* contains event details */
 .events--container {
 box-shadow: 1px 1px 1.7em rgba(0, 0, 0, 0.3);
-padding: 1em;
+padding: 2em;
 margin-top: 1em
 }
 
@@ -301,7 +307,7 @@ margin-top: 1em
 .events--container h3 {
 color: rgb(217, 0, 0);
 font-size: 2em;
-margin-bottom: 0.3em;
+margin-bottom: 1em;
 }
 
 /* contains image and event text */
@@ -395,8 +401,26 @@ margin-bottom: 2em;
 /* MEDIA QUERIES
 ================================================= */
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 889px) {
     main {
     display: block;
     }
+
+    .info--container {
+    display: block;
+    }
+
+    .info .container {
+    padding: 3em 6em;
+    }
+
+    .headericon, .headericon.hours {
+    margin-bottom: 2em;
+    }
+
+    .header {
+    background-attachment: local;
+    }
+
+
 }
