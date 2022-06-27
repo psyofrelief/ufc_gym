@@ -29,6 +29,7 @@ main {
 display: grid;
 grid: 
 'info events';
+max-height: 45.2em;
 }
 
 
@@ -289,9 +290,8 @@ text-shadow: 2px 1px 0.5em black;
 
 /* contains event details */
 .events--container {
-box-shadow: 1px 1px 0.9em darkgray;
+box-shadow: 1px 1px 1.7em rgba(0, 0, 0, 0.7);
 padding: 1em;
-border: 1px solid red;
 }
 
 /* events heading */
@@ -339,19 +339,22 @@ min-width: 45em;
 }
 
 .footer--container {
-display: flex;
+display: grid;
 color: whitesmoke;
+padding: 1.8em;
+grid: 'logos info locations';
+text-align: center;
 }
 
 
-
+/* contains slogan text */
 .slogan {
-outline: 1px solid red;
 display: flex;
 background-color: rgb(234, 0, 0);
 min-width: 100%;
 }
 
+/* #traindifferent at our gym */
 .slogan p {
 margin: 0.8em auto;
 font-size: 2em;
@@ -359,15 +362,35 @@ color: white;
 text-shadow: 1px 1px 0.5em rgba(0, 0, 0, 0.5);
 }
 
+.footer--logos {
+display: flex;
+flex-direction: column;
+padding: 1em;
+align-items: center;
+justify-content: center;
+}
 
+.footer--info {
 
+}
 
+.footer--locations {
+
+}
+
+h4 {
+font-size: 1.1em;
+}
+
+/* footer links */
 .footer a {
 text-decoration: none;
 color: whitesmoke;
 }
 
+/* images in footer */
 .footer img {
-max-width: 6em;
+max-width: 10em;
+margin-bottom: 2em;
 }
 
